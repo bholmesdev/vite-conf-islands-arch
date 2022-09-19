@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Preact + TS</title>
+  </head>
+  <body>
+    <vite-land src="MobileNav" client:media="(max-width: 600px)"></vite-land>
+    <vite-land src="App"></vite-land>
+    <hr style="margin-top: 100vh" />
+    <vite-land src="ImageCarousel" client:visible></vite-land>
+  </body>
+  <script type="module" src="./src/client.ts"></script>
+</html>

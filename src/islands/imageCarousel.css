@@ -1,0 +1,18 @@
+.carousel {
+  display: grid;
+  grid-template: 1fr;
+}
+
+.image {
+  grid-area: 1 / -1;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.image.visible {
+  visibility: visible;
+  opacity: 1;
+}

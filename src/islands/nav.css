@@ -1,0 +1,65 @@
+.dropdown.expanded {
+  opacity: 1;
+  /* notice we don't need to reset to display: flex anymore! */
+  /* since visibility just handles show-hide, we don't need to worry about "losing" our flexbox */
+  visibility: visible;
+}
+
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  background: rgb(48, 46, 53);
+  /* you can ignore the rest of this */
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dropdown a {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.toggle-dropdown svg {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.toggle-dropdown {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  inset: 0;
+  bottom: unset;
+  background: rgb(48, 46, 53);
+  padding: 1rem;
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .mobile-bp {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .desktop-bp {
+    display: none;
+  }
+}
